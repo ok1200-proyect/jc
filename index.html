@@ -205,7 +205,21 @@
 
                     <div class="col-lg-6 col-12 Form">
                         <p class="Prefer-email_contact d-lg-none d-flex">Or fill in the form below.</p>
-                      <?php require 'contact-form.php'; ?>
+                      <form action="#Contact-section" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="action" value="submit">
+                        <input required type="text" name="nombre" value="" class="form-control Form_input" id="nombre" placeholder="Your Name *">
+                        <input required type="email" name="email" value="" class="form-control Form_input" id="email" placeholder="Email *">
+                        <select required id="servicio" class="form-control Form_input form-control-lg" name="servicio">
+                            <option selected="selected" disabled="disabled">Project</option>
+                            <option value="Branding" >Branding</option>
+                            <option value="Web Design" >Web Design</option>
+                            <option value="App Design" >App Design</option>
+                            <option value="Social Marketing" >Social Marketing</option>
+                        </select>
+                        <textarea required type="text" name="mensaje" rows="4" cols="50" class="form-control Form_area" id="mensaje" placeholder="Message *"></textarea>
+                        <button id="submit" class="Menu-button Form_button Up-animation" type="submit">Send</button>
+
+                    </form>
                     </div>
                     <div class="col-lg-5 col-12 offset-0 offset-lg-1 order-first order-lg-last">
                         <section class="Profile-contact">
